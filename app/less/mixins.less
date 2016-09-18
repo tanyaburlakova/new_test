@@ -9,21 +9,6 @@
 		clear: both;
 	}
 }
-// Body message
-.message (@msg) {
-	body {
-		&:before {
-			content: @msg;
-			position: fixed;
-			left: 10px;
-			bottom: 10px;
-			display: inline-block;
-			padding: 10px;
-			background: orange;
-			color: #fff;
-		}
-	}
-}
 // Dib fix
 .dibfix {
 	font-size: 0;
@@ -109,7 +94,13 @@
 }
 // Rgba color resolver
 .rgba(@attr: background, @color: orange, @opacity: .5) {
-	@c1: #fff;
-	@c2: @color;
-	@{attr}: rgb((1 - @opacity) * red(@c1) + @opacity * red(@c2), (1 - @opacity) * green(@c1) + @opacity * green(@c2), (1 - @opacity) * blue(@c1) + @opacity * blue(@c2));
+    @c1: #fff;
+    @c2: @color;
+    @{attr}: rgb((1 - @opacity) * red(@c1) + @opacity * red(@c2), (1 - @opacity) * green(@c1) + @opacity * green(@c2), (1 - @opacity) * blue(@c1) + @opacity * blue(@c2));
+}
+
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+    background-position: @x @y;
+    width: @width;
+    height: @height;
 }

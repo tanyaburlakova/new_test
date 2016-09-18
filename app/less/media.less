@@ -1,22 +1,21 @@
 // Sizes
-@desktop: 1280px;
-@tablet: 960px;
+@desktop: 1024px;
+@tablet: 768px;
 @portreit: 640px;
 @mobile: 320px;
-@scrollbar: 30px;
 // Desktop
-@media (min-width: (@desktop + @scrollbar)) {
-	.message('Desktop');
+@media (min-width: (@desktop)) {
+
 }
 // Tablet
-@media (max-width: (@desktop + @scrollbar)) {
-	.message('Tablet');
+@media (max-width: (@desktop)) {
+
 }
 // Portreit
-@media (max-width: (@tablet + @scrollbar)) {
-	.message('Portreit');
+@media (max-width: (@tablet)) {
+
 }
 // Mobile
-@media (max-width: (@portreit + @scrollbar)) {
-	.message('Mobile');
+@media (max-width: (@portreit)) {
+
 }
